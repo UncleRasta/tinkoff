@@ -1,16 +1,10 @@
 class Keyboard:
-    _text = None
-    _keys = None
+    def __init__(self):
+        self._text = "Here's some actions"
+        self._keys = ["/Portfolio", "/Anomalies", "/Operations"]
 
-    @classmethod
-    def keys(cls):
-        return [{"text": key} for key in cls._keys]
-
-    @classmethod
-    def text(cls):
+    def keys(self):
+        return [{"text": key} for key in self._keys]
+    
+    def text(self):
         return self._text
-
-
-class HelperKeyboard(Keyboard):
-    _text = "Here's some actions"
-    _keys = ["Portfolio", "Anomalies", "Operations"]
