@@ -18,7 +18,7 @@ class TelegramMethods(Enum):
 
 class TelegramClient(metaclass=MetaSingleton):
     def __init__(self, access_token: str = None):
-        self._access_token = access_token if access_token else os.environ["TG_TOKEN"]
+        self._access_token = access_token if access_token else os.environ['TG_TOKEN']
         self._base_url = f"https://api.telegram.org/{self._access_token}"
         self._session = requests.Session()
         

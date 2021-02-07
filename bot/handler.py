@@ -1,5 +1,5 @@
 from .telegram import TelegramClient
-from .keyboard import HelperKeyboard
+from .keyboard import Keyboard
 from .exchange import Tinkoff
 
 class Handler:
@@ -25,7 +25,7 @@ class Handler:
 
 class MainHandler(Handler):
     def handle(self, chat_id: int, message: str):
-        self.telegram.provide_keyboard(chat_id=chat_id, keyboard=HelperKeyboard)
+        self.telegram.provide_keyboard(chat_id=chat_id, keyboard=Keyboard)
 
 
 class HelpHandler(Handler):

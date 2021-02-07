@@ -5,7 +5,6 @@ from bot.handler import Handler
 from bot.telegram import TelegramClient
 from bot.exchange import Tinkoff
 
-
 app = Flask(__name__)
 telegram_client = TelegramClient()
 
